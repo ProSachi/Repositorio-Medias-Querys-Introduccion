@@ -252,6 +252,116 @@ h2 {
   font-size: 0.9rem;
 }
 
+.registration {
+  min-height: calc(100vh - 148px);
+  padding-block: 2.5rem;
+  background: linear-gradient(135deg, #f1f8fc 0%, #ffffff 52%, #fff3f8 100%);
+}
+
+.registration__layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.registration__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.registration__intro h1 {
+  max-width: 12ch;
+}
+
+.registration__intro > p:not(.eyebrow) {
+  max-width: 42ch;
+  color: var(--cesde-gris);
+}
+
+.registration__back {
+  color: var(--cesde-morado);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.registration__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--cesde-borde);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.registration__form h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.registration__fields {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.form-field input,
+.form-field select {
+  width: 100%;
+  min-height: 2.9rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #aeb8b4;
+  border-radius: 4px;
+  background: #ffffff;
+  color: var(--cesde-tinta);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-consent input:focus-visible,
+.registration__submit:focus-visible {
+  outline: 3px solid var(--cesde-azul-claro);
+  outline-offset: 2px;
+}
+
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--cesde-gris);
+  font-size: 0.9rem;
+}
+
+.form-consent input {
+  flex: 0 0 auto;
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2rem;
+  accent-color: var(--cesde-magenta);
+}
+
+.registration__submit {
+  width: 100%;
+  border-radius: 4px;
+}
+
+.registration__status {
+  color: var(--cesde-morado);
+  font-weight: 600;
+}
+
 @media (min-width: 768px) {
   .header__content {
     flex-direction: row;
@@ -284,6 +394,29 @@ h2 {
 
   .benefit {
     flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .registration {
+    padding-block: 4rem;
+  }
+
+  .registration__layout {
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .registration__form {
+    padding: 2rem;
+  }
+
+  .registration__fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .registration__submit {
+    width: fit-content;
+    align-self: flex-start;
   }
 }
 
